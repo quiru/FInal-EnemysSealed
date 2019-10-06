@@ -103,7 +103,7 @@ public class Generador : MonoBehaviour
         contMalo1.text = "malo 1: " + numMalo1; //muestra la cantidad de malos
         contMalo2.text = "malo 2: " + numMalo2;
 
-        if (numMalo1 == 0 || numMalo2 == 0) //verifica si el numero de malos es 0 y acaba el juego y da el mensaje
+        if (numMalo1 == 0 && numMalo2 == 0) //verifica si el numero de malos es 0 y acaba el juego y da el mensaje
         {
             isPlaying = false;
             mensGamover.text = "GANASTE, lo lograste";

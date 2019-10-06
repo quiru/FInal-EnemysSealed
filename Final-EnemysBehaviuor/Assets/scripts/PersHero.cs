@@ -92,7 +92,7 @@ public class PersHero : MonoBehaviour //Comportamiento de heroe
                     buscaCanvas.GetComponent<Generador>().mensCiudadano.text = "los huevitos dan vueltas";
                     break;
                 case Ciudadano.DatosCiud.frasesCiudd.romualdo:
-                    buscaCanvas.GetComponent<Generador>().mensCiudadano.text = "con la tecla espacio les quira vida";
+                    buscaCanvas.GetComponent<Generador>().mensCiudadano.text = "con la tecla espacio les quita vida";
                     break;
                 case Ciudadano.DatosCiud.frasesCiudd.dioselina:
                     buscaCanvas.GetComponent<Generador>().mensCiudadano.text = "solo tienes 3 vidas, aprovechalas";
@@ -112,6 +112,7 @@ public class PersHero : MonoBehaviour //Comportamiento de heroe
         {
             colision.transform.SetParent(this.gameObject.transform); //lo vuelve hijo del heroe
             colision.gameObject.GetComponent<Renderer>().enabled = false; //insbilita el renderer
+            colision.gameObject.AddComponent<ItemBehaviour>();
         }
     }
 
