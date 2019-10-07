@@ -21,7 +21,7 @@ public class MovArma : MonoBehaviour //para mover el arma
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision) //para restar vida a los malos
     {
         if (collision.transform.name == "malo1" && Input.GetKey(KeyCode.Space))
         {
